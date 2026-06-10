@@ -71,7 +71,7 @@ body {
     box-sizing: border-box;
     display: grid;
     gap: 5px;
-    background-image: url("Game-Taekwondo/Asset/background.png");
+    background-image: url("https://raw.githubusercontent.com/Gemblak16/Game-Taekwondo/refs/heads/main/Asset/background.png");
     background-size: cover;
     background-position: center;
     border-radius: 14px;
