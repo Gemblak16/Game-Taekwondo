@@ -53,7 +53,7 @@ function saveToLeaderboard(forcePrompt = false) {
     let playerName = localStorage.getItem("tkd_playerName");
     
     if (!playerName && score > 0) {
-        playerName = prompt("Masukkan nama Anda untuk Papan Peringkat:", "Ksatria_WT");
+        playerName = prompt("Masukkan nama Anda untuk Papan Peringkat:", "PMS DRAGON");
         if (!playerName || playerName.trim() === "") playerName = "Anonim";
         localStorage.setItem("tkd_playerName", playerName);
     }
@@ -111,5 +111,19 @@ function resetAllGameData() {
         localStorage.clear();
         alert("✅ Data berhasil di-reset!");
         window.location.reload();
+    }
+}
+function togglePanel(panelId) {
+    const panel = document.getElementById(panelId);
+    if (!panel) return;
+
+    // Jika panel menggunakan class CSS untuk sembunyi/muncul (misal: 'active' atau 'show')
+    panel.classList.toggle("active");
+
+    // ATAU jika menggunakan display block/none, gunakan kode di bawah ini:
+    if (panel.style.display === "block") {
+        panel.style.display = "none";
+    } else {
+        panel.style.display = "block";
     }
 }
