@@ -71,7 +71,7 @@ body {
     box-sizing: border-box;
     display: grid;
     gap: 5px;
-    background-image: url("background.png");
+    background-image: url("Game-Taekwondo/CSS/background.png");
     background-size: cover;
     background-position: center;
     border-radius: 14px;
