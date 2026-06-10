@@ -1,2 +1,2 @@
 # Game-Taekwondo
-Percobaan membuat game
+Game yang sangat seru dan memacu adrenalin
