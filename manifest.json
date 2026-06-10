@@ -1,0 +1,32 @@
+{
+  "short_name": "Taekwondo MP",
+  "name": "Taekwondo Memory Puzzle - Progressive Edition",
+  "description": "Game asah otak seru bertema Taekwondo dengan sentuhan visual klasik Jawa yang menawan.",
+  "icons": [
+    {
+      "src": "dragon.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "dragon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "dragon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "./halaman.html",
+  "background_color": "#1a0f05",
+  "theme_color": "#2c3e50",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["games", "utilities"],
+  "lang": "id"
+}
