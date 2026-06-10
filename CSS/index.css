@@ -1,0 +1,334 @@
+/* ==========================================================================
+   1. RESET & OPTIMISASI MOBILE (ANDROID)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-border: border-box;
+    -webkit-tap-highlight-color: transparent; /* Hilangkan kedipan biru di Android */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    background: #1a0f05 url('Background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    color: #f5f0e1; /* Warna putih gading khas kain jowo */
+    padding: 15px;
+}
+
+/* Efek Overlay Gelap Estetik di atas Background agar teks terbaca jelas */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(26,15,5,0.85) 100%);
+    z-index: -1;
+}
+
+/* ==========================================================================
+   2. MARQUEE ANIME (RUNNING TEXT)
+   ========================================================================== */
+.running-text {
+    background: linear-gradient(90deg, rgba(212,175,55,0) 0%, rgba(139,0,0,0.8) 50%, rgba(212,175,55,0) 100%);
+    color: #ffd700; /* Emas */
+    font-weight: bold;
+    font-size: 13px;
+    padding: 6px 0;
+    width: 100%;
+    text-shadow: 1px 1px 2px #000;
+    border-top: 1px solid #d4af37;
+    border-bottom: 1px solid #d4af37;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   3. MENU UTAMA & BADGE
+   ========================================================================== */
+.top-menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 450px;
+}
+
+.settings-btn {
+    font-size: 24px;
+    cursor: pointer;
+    background: rgba(44, 62, 80, 0.6);
+    padding: 8px;
+    border-radius: 50%;
+    border: 1.5px solid #d4af37;
+    box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    transition: transform 0.3s ease;
+    animation: pulseGlow 3s infinite alternate;
+}
+
+.menu-container {
+    background: rgba(26, 15, 5, 0.75); /* Glassmorphism gelap Jawa */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid #d4af37; /* Border warna emas */
+    border-radius: 20px;
+    padding: 25px 20px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7), inset 0 0 20px rgba(212,175,55,0.15);
+    margin: auto 0;
+}
+
+/* Efek Logo Dragon Mengambang */
+.menu-container img {
+    filter: drop-shadow(0 0 12px #d63031);
+    animation: floatAnim 4s ease-in-out infinite;
+    margin: 15px 0;
+}
+
+.game-title {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #f5f0e1;
+    text-shadow: 3px 3px 0px #000, 0 0 10px rgba(212,175,55,0.5);
+}
+
+.game-subtitle {
+    font-size: 14px;
+    color: #ffd700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: -2px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* User Badge Petarung */
+.user-badge {
+    background: linear-gradient(135deg, #2c1a04 0%, #4a2c00 100%);
+    border: 1px solid #8b6508;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.user-badge div {
+    font-weight: bold;
+    color: #f5f0e1;
+    text-shadow: 1px 1px 1px #000;
+}
+
+/* ==========================================================================
+   4. TOMBOL-TOMBOL (BUTTONS) SUPER CANGGIH
+   ========================================================================== */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+button {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tombol Start - Merah Membara berpadu Emas Jawa */
+#btnStart {
+    background: linear-gradient(to bottom, #d63031, #8b0000);
+    border: 1.5px solid #ffd700;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+#btnStart:active {
+    transform: scale(0.97);
+    background: linear-gradient(to bottom, #8b0000, #5c0000);
+}
+
+/* Tombol Toko Taegeuk */
+#btnShop {
+    background: linear-gradient(to bottom, #b8860b, #6e470b);
+    border: 1.5px solid #f5f0e1;
+}
+
+/* Tombol Akun */
+#btnAccount {
+    background: linear-gradient(to bottom, #4a5568, #2d3748);
+    font-size: 13px;
+}
+
+/* Feedback ketukan tombol di HP */
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* ==========================================================================
+   5. OVERLAY & PANEL (AKUN & PENGATURAN)
+   ========================================================================== */
+.overlay, .settings-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Kelas Trigger Tampil (Gunakan JS untuk add/remove class ini atau ubah style.display) */
+.overlay.active, .settings-overlay:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.panel, .settings-panel {
+    background: #22140a;
+    border: 2px solid #d4af37;
+    border-radius: 16px;
+    padding: 20px;
+    width: 85%;
+    max-width: 340px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    color: #f5f0e1;
+}
+
+/* Desain Input Akun */
+.panel h3, .settings-panel h4 {
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.panel input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    background: #110a05;
+    border: 1px solid #8b6508;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.panel input[type="text"]:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 8px rgba(212,175,55,0.5);
+}
+
+/* Tombol Aksi di Dalam Panel */
+.btn-action {
+    background: #21bb1a;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.btn-close {
+    background: #d63031;
+    width: 100%;
+}
+
+/* ==========================================================================
+   6. SETTINGS PANEL KHUSUS
+   ========================================================================== */
+.settings-panel {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.settings-panel.hidden {
+    display: none;
+}
+
+.settings-group {
+    background: rgba(0,0,0,0.3);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #4a2c00;
+}
+
+.settings-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.settings-slider-container input[type="range"], 
+.settings-group input[type="range"] {
+    width: 100%;
+    accent-color: #ffd700; /* Warna slider jadi emas di android modern */
+    margin-bottom: 10px;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+.btn-reset-data {
+    background: #c0392b;
+    font-size: 11px;
+    padding: 8px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   7. FOOTER & ANIMASI
+   ========================================================================== */
+footer {
+    font-size: 10px;
+    color: rgba(245, 240, 225, 0.4);
+    text-align: center;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+/* Animasi Floating Gambar Naga */
+@keyframes floatAnim {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Animasi Glow pada Tombol Settings */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 5px rgba(212,175,55,0.4); }
+    100% { box-shadow: 0 0 15px rgba(212,175,55,0.8); }
+}
