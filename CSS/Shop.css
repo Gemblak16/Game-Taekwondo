@@ -2,7 +2,7 @@ body {
     margin: 0;
     min-height: 100vh;
 
-    background: url("/Asset/Background.jpg") center center / cover no-repeat fixed;
+    background: url("https://raw.githubusercontent.com/Gemblak16/Game-Taekwondo/refs/heads/main/Asset/Background.jpg") center center / cover no-repeat fixed;
 
     font-family: 'Segoe UI', sans-serif;
     color: white;
